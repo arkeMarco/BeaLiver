@@ -1,0 +1,94 @@
+{
+  "id": "page",
+  "label": "Homepage",
+  "format": "page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID",
+          "placeholder": ""
+        }
+      },
+      "seo_title": {
+        "type": "Text",
+        "config": {
+          "label": "seo title",
+          "placeholder": ""
+        }
+      },
+      "seo_description": {
+        "type": "Text",
+        "config": {
+          "label": "seo description",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "welcome": {
+              "type": "SharedSlice"
+            },
+            "become_a_member": {
+              "type": "SharedSlice"
+            },
+            "hp_form": {
+              "type": "SharedSlice"
+            },
+            "hp_banda": {
+              "type": "SharedSlice"
+            },
+            "hp_people": {
+              "type": "SharedSlice"
+            },
+            "hp_our_projects": {
+              "type": "SharedSlice"
+            },
+            "hp_join_us": {
+              "type": "SharedSlice"
+            },
+            "hp_about": {
+              "type": "SharedSlice"
+            },
+            "rich_text": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Meta Image",
+          "constraint": {
+            "width": 2400,
+            "height": 1260
+          },
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

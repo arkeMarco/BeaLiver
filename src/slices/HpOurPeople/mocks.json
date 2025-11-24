@@ -1,0 +1,108 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"above_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sunt sunt labore deserunt occaecat et officia magna Lorem dolore."
+						}
+					}
+				]
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nostrud nostrud nisi dolore fugiat ex magna aute nostrud sunt proident aliquip aliquip."
+						}
+					}
+				]
+			},
+			"person": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"name",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Elit ea consectetur commodo laborum sunt nisi voluptate adipisicing cupidatat pariatur sint excepteur culpa fugiat nulla. Sint laboris ipsum enim fugiat veniam esse incididunt velit ea dolor ullamco ut."
+											}
+										}
+									]
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Pariatur ad ex duis duis in incididunt magna cupidatat nisi et et qui eu. Duis minim magna voluptate aute quis laboris irure cillum cupidatat magna ad. Voluptate sint mollit proident dolore quis cupidatat deserunt et velit."
+											}
+										}
+									]
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Tempor laboris anim non qui magna consequat consequat. Irure ex qui et aliqua Lorem duis sint veniam consectetur ut Lorem sunt in."
+											}
+										}
+									]
+								}
+							],
+							[
+								"person_image",
+								{
+									"__TYPE__": "ImageContent",
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+										"width": 3560,
+										"height": 5340
+									},
+									"url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+									"width": 3560,
+									"height": 5340,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "row",
+									"thumbnails": {}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

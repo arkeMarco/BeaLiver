@@ -1,0 +1,77 @@
+import { FC } from "react";
+import { Content } from "@prismicio/client";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import Image from "next/image";
+
+export type HpAboutProps = SliceComponentProps<Content.HpAboutSlice>;
+
+const HpAbout: FC<HpAboutProps> = ({ slice }) => {
+  return (
+    <div className="py-24">
+      <div className="text-gray-400 text-sm mx-auto text-center mb-2">
+        <PrismicRichText field={slice.primary.above_title} />
+      </div>
+
+      <div className="text-white text-2xl font-light text-center ">
+        <PrismicRichText field={slice.primary.title} />
+      </div>
+
+      <div className="flex items-start gap-6 pt-10 font-light">
+        <div className="w-1/2">
+          <PrismicNextImage field={slice.primary.image} />
+        </div>
+
+        <div className="w-1/2 text-white p-4">
+          <div className="text-2xl mb-8">
+            <PrismicRichText field={slice.primary.cardtitle} />
+          </div>
+
+          <div className="text-base mb-6 [&_p]:mb-4">
+            <PrismicRichText field={slice.primary.description} />
+          </div>
+
+          <div>
+            <PrismicNextLink
+              field={slice.primary.button}
+              className="inline-flex items-center gap-2 border border-white rounded-lg px-6 py-2 hover:bg-white hover:text-black transition-colors"
+            >
+              Who we are
+              <Image
+                src="/images/rightArrow.svg"
+                alt="Arrow right"
+                width={16}
+                height={16}
+                className="text-current"
+              />
+            </PrismicNextLink>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-12 bg-white/10 rounded-2xl backdrop-blur-sm mx-auto w-2/3 p-7">
+        <div className="flex items-center justify-center gap-8">
+          <div className="text-lg font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+            <PrismicRichText field={slice.primary.below_card_title} />
+          </div>
+
+          <PrismicNextLink
+            field={slice.primary.below_card_button}
+            className="shrink-0 inline-flex items-center gap-2 border text-sm border-white rounded-lg px-6 py-2 text-white hover:bg-white hover:text-black transition-colors"
+          >
+            Discover our vision
+            <Image
+              src="/images/rightArrow.svg"
+              alt="Arrow right"
+              width={16}
+              height={16}
+              className="text-current"
+            />
+          </PrismicNextLink>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HpAbout;

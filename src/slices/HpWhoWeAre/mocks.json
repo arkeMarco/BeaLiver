@@ -1,0 +1,104 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"above_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sint quis labore ipsum veniam deserunt qui."
+						}
+					}
+				]
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Deserunt in et labore ipsum incididunt non pariatur proident elit adipisicing ad. Mollit aute dolor quis enim veniam ex dolor occaecat fugiat elit."
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Qui dolore id Lorem ipsum adipisicing ex velit. Esse tempor velit incididunt et ea est mollit deserunt reprehenderit cupidatat. Lorem minim ullamco fugiat."
+						}
+					}
+				]
+			},
+			"below_card_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sunt nisi qui deserunt."
+						}
+					}
+				]
+			},
+			"below_card_button": {
+				"key": "1721afea-0a87-4f55-ac86-319e98d99862",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "business"
+				}
+			},
+			"button": {
+				"key": "af7128f4-9dc2-459f-b8a3-edcbca51b999",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "provide"
+				}
+			},
+			"cardtitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Eu do ea commodo qui do aliqua occaecat ipsum anim."
+						}
+					}
+				]
+			},
+			"image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+					"width": 3344,
+					"height": 2509
+				},
+				"url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+				"width": 3344,
+				"height": 2509,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "song",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]

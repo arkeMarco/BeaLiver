@@ -1,0 +1,180 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"abovetitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ut minim pariatur minim tempor elit occaecat. Duis laboris minim adipisicing aliquip nostrud dolore et ea aliqua excepteur amet. Deserunt enim consequat consectetur et est voluptate ex laboris magna dolore ad sunt cillum."
+						}
+					}
+				]
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Commodo exercitation officia quis velit culpa ad cupidatat ut velit nostrud."
+						}
+					}
+				]
+			},
+			"cards": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"category",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Sunt consequat non pariatur amet dolore ex non fugiat fugiat quis ad irure laboris."
+											}
+										}
+									]
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Lorem proident amet dolore amet reprehenderit aliqua Lorem aliqua excepteur reprehenderit incididunt ut dolore mollit commodo. Adipisicing esse ea fugiat ut ex pariatur quis eu mollit commodo dolor."
+											}
+										}
+									]
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Enim amet minim proident officia cupidatat eu dolor labore et sunt. Exercitation exercitation ad incididunt."
+											}
+										}
+									]
+								}
+							],
+							[
+								"competenze",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Minim Lorem tempor proident qui et non consequat adipisicing proident dolore ipsum voluptate est sint eu."
+											}
+										}
+									]
+								}
+							],
+							[
+								"tecnologyimg",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+										"width": 4480,
+										"height": 4480
+									},
+									"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+									"width": 4480,
+									"height": 4480,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "finish",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+										"width": 3882,
+										"height": 2584
+									},
+									"url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+									"width": 3882,
+									"height": 2584,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "definition",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					}
+				]
+			},
+			"button_projects": {
+				"key": "4f1dfd45-bb48-4b4c-b03b-cfae03bff2aa",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "western"
+				}
+			},
+			"button_projects_arrow": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
+					"width": 4000,
+					"height": 6000
+				},
+				"url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
+				"width": 4000,
+				"height": 6000,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "summer",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]
