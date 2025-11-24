@@ -2,7 +2,6 @@ import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
-import Image from "next/image";
 
 export type HpAboutProps = SliceComponentProps<Content.HpAboutSlice>;
 
@@ -34,16 +33,13 @@ const HpAbout: FC<HpAboutProps> = ({ slice }) => {
           <div>
             <PrismicNextLink
               field={slice.primary.button}
-              className="inline-flex items-center gap-2 border border-white rounded-lg px-6 py-2 hover:bg-white hover:text-black transition-colors"
+              className="group inline-flex items-center gap-2 border border-white rounded-lg px-6 py-2 hover:bg-white hover:text-black transition-colors"
             >
               Who we are
-              <Image
-                src="/images/rightArrow.svg"
-                alt="Arrow right"
-                width={16}
-                height={16}
-                className="text-current"
-              />
+              {/* Freccia HTML (W3Schools style) */}
+              <span className="text-lg font-bold transition-transform group-hover:translate-x-1">
+                &#8594;
+              </span>
             </PrismicNextLink>
           </div>
         </div>
@@ -57,16 +53,13 @@ const HpAbout: FC<HpAboutProps> = ({ slice }) => {
 
           <PrismicNextLink
             field={slice.primary.below_card_button}
-            className="shrink-0 inline-flex items-center gap-2 border text-sm border-white rounded-lg px-6 py-2 text-white hover:bg-white hover:text-black transition-colors"
+            className="group shrink-0 inline-flex items-center gap-2 border text-sm border-white rounded-lg px-6 py-2 text-white hover:bg-white hover:text-black transition-colors"
           >
             Discover our vision
-            <Image
-              src="/images/rightArrow.svg"
-              alt="Arrow right"
-              width={16}
-              height={16}
-              className="text-current"
-            />
+            {/* Freccia HTML (W3Schools style) */}
+            <span className="text-lg font-bold transition-transform group-hover:translate-x-1">
+              &#8594;
+            </span>
           </PrismicNextLink>
         </div>
       </div>
