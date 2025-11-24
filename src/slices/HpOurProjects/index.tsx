@@ -54,16 +54,12 @@ const HpOurProjects: FC<HpOurProjectsProps> = ({ slice }) => {
 
         {/* Carosello Card */}
         <div className="relative bg-transparent mb-16">
-          
           {/* 
              WRAPPER ANIMATO:
              1. key={currentIndex}: Forza React a ricreare il div quando l'indice cambia.
              2. animate-slide-up-fade: Applica l'animazione definita sopra.
           */}
-          <div 
-            key={currentIndex}
-            className="animate-slide-up-fade"
-          >
+          <div key={currentIndex} className="animate-slide-up-fade">
             {/* Card Content Flex Container */}
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
               {/* Sinistra: Immagine */}
@@ -102,7 +98,38 @@ const HpOurProjects: FC<HpOurProjectsProps> = ({ slice }) => {
               </div>
             </div>
           </div>
-          
+
+          {/* Navigazione Carosello */}
+          <div className="flex justify-center gap-4 mt-12">
+            <button
+              onClick={prevCard}
+              className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-black text-white transition-all duration-300"
+              aria-label="Previous project"
+            >
+              <Image
+                src="/Images/rightArrow.svg"
+                alt="Previous"
+                width={16}
+                height={16}
+                className="rotate-180 invert-0 hover:invert"
+              />
+            </button>
+
+            <button
+              onClick={nextCard}
+              className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-black text-white transition-all duration-300"
+              aria-label="Next project"
+            >
+              <Image
+                src="/Images/rightArrow.svg"
+                alt="Next"
+                width={16}
+                height={16}
+                className="invert-0 hover:invert"
+              />
+            </button>
+          </div>
+
           {/* Bottone "See more projects" (Fuori dal blocco animato per restare fisso se preferisci, o dentro se vuoi che animi anche lui) */}
           <div className="pt-4 w-full flex justify-center mt-8">
             <PrismicNextLink
@@ -119,37 +146,6 @@ const HpOurProjects: FC<HpOurProjectsProps> = ({ slice }) => {
               />
             </PrismicNextLink>
           </div>
-        </div>
-
-        {/* Navigazione Carosello */}
-        <div className="flex justify-center gap-4 mt-12">
-          <button
-            onClick={prevCard}
-            className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-black text-white transition-all duration-300"
-            aria-label="Previous project"
-          >
-            <Image
-              src="/Images/rightArrow.svg"
-              alt="Previous"
-              width={16}
-              height={16}
-              className="rotate-180 invert-0 hover:invert"
-            />
-          </button>
-
-          <button
-            onClick={nextCard}
-            className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-black text-white transition-all duration-300"
-            aria-label="Next project"
-          >
-            <Image
-              src="/Images/rightArrow.svg"
-              alt="Next"
-              width={16}
-              height={16}
-              className="invert-0 hover:invert"
-            />
-          </button>
         </div>
       </div>
     </section>
