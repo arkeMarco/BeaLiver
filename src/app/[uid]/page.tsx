@@ -28,6 +28,8 @@ export async function generateMetadata({
   const page = await client.getByUID("page", uid).catch(() => notFound());
 
   return {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-ignore
     title: asText(page.data.title),
     description: page.data.meta_description,
     openGraph: {

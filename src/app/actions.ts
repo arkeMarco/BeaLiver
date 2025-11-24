@@ -17,10 +17,9 @@ export async function sendEmail(formData: FormData) {
   try {
     const data = await resend.emails.send({
       // Importante: Usa un indirizzo del tuo dominio verificato, o 'onboarding@resend.dev' se stai ancora testando senza dominio configurato su Resend
-      from: "BEA Polimi Website <noreply@beapolimi.it>", 
+      from: "BEA Polimi Website <noreply@beapolimi.it>",
       to: ["communication@beapolimi.it"], // La mail di destinazione che mi hai dato
       subject: `Nuovo messaggio da ${name}: ${subject}`,
-      reply_to: email, // Così puoi rispondere direttamente all'utente
       text: message,
       html: `
         <h3>Nuovo messaggio dal sito web</h3>
