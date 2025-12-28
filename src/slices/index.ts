@@ -4,12 +4,15 @@ import dynamic from "next/dynamic";
 
 export const components = {
   become_a_member: dynamic(() => import("./BecomeAMember")),
+  events_introduction: dynamic(() => import("./EventsIntroduction")),
+  filters: dynamic(() => import("./EventsList")),
   hp_about: dynamic(() => import("./HpWhoWeAre")),
   hp_banda: dynamic(() => import("./HpNumbers")),
   hp_form: dynamic(() => import("./HpForm")),
   hp_join_us: dynamic(() => import("./HpOurTeams")),
   hp_our_projects: dynamic(() => import("./HpOurProjects")),
   hp_people: dynamic(() => import("./HpOurPeople")),
+  projects_list: dynamic(() => import("./ProjectsList")),
   rich_text: dynamic(() => import("./RichText")),
   welcome: dynamic(() => import("./HpWelcome")),
 };

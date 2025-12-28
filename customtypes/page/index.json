@@ -32,6 +32,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "filters": {
+              "type": "SharedSlice"
+            },
+            "events_introduction": {
+              "type": "SharedSlice"
+            },
             "welcome": {
               "type": "SharedSlice"
             },

@@ -1,0 +1,183 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"filters_list": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"filter_name",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Excepteur deserunt nulla quis ullamco dolore qui reprehenderit incididunt labore fugiat qui."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"projects_item": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"item_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+										"width": 4480,
+										"height": 4480
+									},
+									"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+									"width": 4480,
+									"height": 4480,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "gain",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"item_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Adipisicing minim exercitation consectetur duis occaecat incididunt. Minim nisi tempor officia id tempor et."
+											}
+										}
+									]
+								}
+							],
+							[
+								"full_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Nostrud officia elit Lorem consequat ea nostrud culpa officia cillum exercitation quis. Ut sunt pariatur aliquip non excepteur ut anim aute sint."
+											}
+										}
+									]
+								}
+							],
+							[
+								"tag_past_present",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Minim id do ad officia reprehenderit adipisicing commodo ex. Ex irure nulla cupidatat dolor qui fugiat deserunt aliquip reprehenderit sint sit fugiat."
+											}
+										}
+									]
+								}
+							],
+							[
+								"tag_track",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Deserunt ea tempor sint elit incididunt aute duis esse ipsum officia. Esse duis exercitation nostrud consequat nulla reprehenderit voluptate labore laborum enim esse ipsum incididunt. Laboris do laboris commodo eu non."
+											}
+										}
+									]
+								}
+							],
+							[
+								"tag_difficulty",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Laboris elit qui esse elit aliqua id. Magna duis cillum in."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"above_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Adipisicing ea esse velit adipisicing non do ut minim sit anim. Deserunt aliquip ea excepteur magna nulla ullamco."
+						}
+					}
+				]
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aliqua est aute in nostrud irure esse elit. Ullamco Lorem nostrud enim quis anim officia elit cupidatat voluptate in."
+						}
+					}
+				]
+			},
+			"above_title_past": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Minim cupidatat sint ex ea tempor commodo minim duis non nisi culpa."
+						}
+					}
+				]
+			},
+			"title_past": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Dolore nisi adipisicing in ut. Commodo ea nulla eu. Anim sit tempor mollit voluptate ea commodo eiusmod id dolor veniam non reprehenderit est."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

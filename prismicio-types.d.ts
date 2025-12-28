@@ -171,6 +171,8 @@ export type HeaderDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | FiltersSlice
+  | EventsIntroductionSlice
   | WelcomeSlice
   | BecomeAMemberSlice
   | HpFormSlice
@@ -437,6 +439,295 @@ type BecomeAMemberSliceVariation = BecomeAMemberSliceDefault;
 export type BecomeAMemberSlice = prismic.SharedSlice<
   "become_a_member",
   BecomeAMemberSliceVariation
+>;
+
+/**
+ * Primary content in *EventsIntroduction → Default → Primary*
+ */
+export interface EventsIntroductionSliceDefaultPrimary {
+  /**
+   * above title field in *EventsIntroduction → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: events_introduction.default.primary.above_title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  above_title: prismic.RichTextField;
+
+  /**
+   * title field in *EventsIntroduction → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: events_introduction.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * events description field in *EventsIntroduction → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: events_introduction.default.primary.events_description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  events_description: prismic.RichTextField;
+
+  /**
+   * tracks title field in *EventsIntroduction → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: events_introduction.default.primary.tracks_title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  tracks_title: prismic.RichTextField;
+
+  /**
+   * tracks description field in *EventsIntroduction → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: events_introduction.default.primary.tracks_description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  tracks_description: prismic.RichTextField;
+}
+
+/**
+ * Default variation for EventsIntroduction Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type EventsIntroductionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<EventsIntroductionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *EventsIntroduction*
+ */
+type EventsIntroductionSliceVariation = EventsIntroductionSliceDefault;
+
+/**
+ * EventsIntroduction Shared Slice
+ *
+ * - **API ID**: `events_introduction`
+ * - **Description**: EventsIntroduction
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type EventsIntroductionSlice = prismic.SharedSlice<
+  "events_introduction",
+  EventsIntroductionSliceVariation
+>;
+
+/**
+ * Item in *EventsList → Default → Primary → buttons for filters track*
+ */
+export interface FiltersSliceDefaultPrimaryButtonsForFiltersItem {
+  /**
+   * filter name field in *EventsList → Default → Primary → buttons for filters track*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.buttons_for_filters[].filter_name
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  filter_name: prismic.RichTextField;
+}
+
+/**
+ * Item in *EventsList → Default → Primary → button for filters type*
+ */
+export interface FiltersSliceDefaultPrimaryFiltersTypeItem {
+  /**
+   * filter name field in *EventsList → Default → Primary → button for filters type*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.filters_type[].filter_name
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  filter_name: prismic.RichTextField;
+}
+
+/**
+ * Item in *EventsList → Default → Primary → items*
+ */
+export interface FiltersSliceDefaultPrimaryItemsItem {
+  /**
+   * item photo field in *EventsList → Default → Primary → items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.items[].item_photo
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  item_photo: prismic.ImageField<never>;
+
+  /**
+   * item title field in *EventsList → Default → Primary → items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.items[].item_title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  item_title: prismic.RichTextField;
+
+  /**
+   * item description field in *EventsList → Default → Primary → items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.items[].item_description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  item_description: prismic.RichTextField;
+
+  /**
+   * item info field in *EventsList → Default → Primary → items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.items[].item_info
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  item_info: prismic.RichTextField;
+
+  /**
+   * full description field in *EventsList → Default → Primary → items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.items[].full_description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  full_description: prismic.RichTextField;
+
+  /**
+   * tag track field in *EventsList → Default → Primary → items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.items[].tag_track
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  tag_track: prismic.RichTextField;
+
+  /**
+   * tag type field in *EventsList → Default → Primary → items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.items[].tag_type
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  tag_type: prismic.RichTextField;
+
+  /**
+   * tag past present field in *EventsList → Default → Primary → items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.items[].tag_past_present
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  tag_past_present: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *EventsList → Default → Primary*
+ */
+export interface FiltersSliceDefaultPrimary {
+  /**
+   * buttons for filters track field in *EventsList → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.buttons_for_filters[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  buttons_for_filters: prismic.GroupField<
+    Simplify<FiltersSliceDefaultPrimaryButtonsForFiltersItem>
+  >;
+
+  /**
+   * button for filters type field in *EventsList → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.filters_type[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  filters_type: prismic.GroupField<
+    Simplify<FiltersSliceDefaultPrimaryFiltersTypeItem>
+  >;
+
+  /**
+   * items field in *EventsList → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.items[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  items: prismic.GroupField<Simplify<FiltersSliceDefaultPrimaryItemsItem>>;
+
+  /**
+   * above title past events field in *EventsList → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.above_title_past_events
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  above_title_past_events: prismic.RichTextField;
+
+  /**
+   * title past events field in *EventsList → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: filters.default.primary.title_past_events
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title_past_events: prismic.RichTextField;
+}
+
+/**
+ * Default variation for EventsList Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FiltersSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FiltersSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *EventsList*
+ */
+type FiltersSliceVariation = FiltersSliceDefault;
+
+/**
+ * EventsList Shared Slice
+ *
+ * - **API ID**: `filters`
+ * - **Description**: Filters
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FiltersSlice = prismic.SharedSlice<
+  "filters",
+  FiltersSliceVariation
 >;
 
 /**
@@ -1141,6 +1432,185 @@ export type HpPeopleSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *ProjectsList → Default → Primary → filters list*
+ */
+export interface ProjectsListSliceDefaultPrimaryFiltersListItem {
+  /**
+   * filter name field in *ProjectsList → Default → Primary → filters list*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects_list.default.primary.filters_list[].filter_name
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  filter_name: prismic.RichTextField;
+}
+
+/**
+ * Item in *ProjectsList → Default → Primary → projects item*
+ */
+export interface ProjectsListSliceDefaultPrimaryProjectsItemItem {
+  /**
+   * item image field in *ProjectsList → Default → Primary → projects item*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects_list.default.primary.projects_item[].item_image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  item_image: prismic.ImageField<never>;
+
+  /**
+   * item description field in *ProjectsList → Default → Primary → projects item*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects_list.default.primary.projects_item[].item_description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  item_description: prismic.RichTextField;
+
+  /**
+   * full description field in *ProjectsList → Default → Primary → projects item*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects_list.default.primary.projects_item[].full_description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  full_description: prismic.RichTextField;
+
+  /**
+   * tag past present field in *ProjectsList → Default → Primary → projects item*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects_list.default.primary.projects_item[].tag_past_present
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  tag_past_present: prismic.RichTextField;
+
+  /**
+   * tag difficulty field in *ProjectsList → Default → Primary → projects item*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects_list.default.primary.projects_item[].tag_difficulty
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  tag_difficulty: prismic.RichTextField;
+
+  /**
+   * tag track field in *ProjectsList → Default → Primary → projects item*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects_list.default.primary.projects_item[].tag_track
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  tag_track: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *ProjectsList → Default → Primary*
+ */
+export interface ProjectsListSliceDefaultPrimary {
+  /**
+   * above title field in *ProjectsList → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects_list.default.primary.above_title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  above_title: prismic.RichTextField;
+
+  /**
+   * title field in *ProjectsList → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects_list.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * filters list field in *ProjectsList → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects_list.default.primary.filters_list[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  filters_list: prismic.GroupField<
+    Simplify<ProjectsListSliceDefaultPrimaryFiltersListItem>
+  >;
+
+  /**
+   * projects item field in *ProjectsList → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects_list.default.primary.projects_item[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  projects_item: prismic.GroupField<
+    Simplify<ProjectsListSliceDefaultPrimaryProjectsItemItem>
+  >;
+
+  /**
+   * above title past field in *ProjectsList → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects_list.default.primary.above_title_past
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  above_title_past: prismic.RichTextField;
+
+  /**
+   * title past field in *ProjectsList → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects_list.default.primary.title_past
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title_past: prismic.RichTextField;
+}
+
+/**
+ * Default variation for ProjectsList Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ProjectsListSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ProjectsListSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ProjectsList*
+ */
+type ProjectsListSliceVariation = ProjectsListSliceDefault;
+
+/**
+ * ProjectsList Shared Slice
+ *
+ * - **API ID**: `projects_list`
+ * - **Description**: ProjectsList
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ProjectsListSlice = prismic.SharedSlice<
+  "projects_list",
+  ProjectsListSliceVariation
+>;
+
+/**
  * Primary content in *RichText → Default → Primary*
  */
 export interface RichTextSliceDefaultPrimary {
@@ -1316,6 +1786,17 @@ declare module "@prismicio/client" {
       BecomeAMemberSliceDefaultPrimary,
       BecomeAMemberSliceVariation,
       BecomeAMemberSliceDefault,
+      EventsIntroductionSlice,
+      EventsIntroductionSliceDefaultPrimary,
+      EventsIntroductionSliceVariation,
+      EventsIntroductionSliceDefault,
+      FiltersSlice,
+      FiltersSliceDefaultPrimaryButtonsForFiltersItem,
+      FiltersSliceDefaultPrimaryFiltersTypeItem,
+      FiltersSliceDefaultPrimaryItemsItem,
+      FiltersSliceDefaultPrimary,
+      FiltersSliceVariation,
+      FiltersSliceDefault,
       HpAboutSlice,
       HpAboutSliceDefaultPrimary,
       HpAboutSliceVariation,
@@ -1346,6 +1827,12 @@ declare module "@prismicio/client" {
       HpPeopleSliceDefaultPrimary,
       HpPeopleSliceVariation,
       HpPeopleSliceDefault,
+      ProjectsListSlice,
+      ProjectsListSliceDefaultPrimaryFiltersListItem,
+      ProjectsListSliceDefaultPrimaryProjectsItemItem,
+      ProjectsListSliceDefaultPrimary,
+      ProjectsListSliceVariation,
+      ProjectsListSliceDefault,
       RichTextSlice,
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,

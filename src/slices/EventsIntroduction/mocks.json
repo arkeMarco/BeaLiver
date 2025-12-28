@@ -1,0 +1,64 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"above_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Eiusmod magna anim laborum proident. Cillum voluptate reprehenderit amet."
+						}
+					}
+				]
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Exercitation amet dolore et do reprehenderit. Magna id nulla laboris."
+						}
+					}
+				]
+			},
+			"events_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ex voluptate velit anim tempor minim ullamco mollit sit. Velit irure ullamco reprehenderit sunt deserunt ipsum nulla duis nisi ut ex."
+						}
+					}
+				]
+			},
+			"tracks_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Incididunt cillum dolor eu. Fugiat ullamco Lorem nostrud reprehenderit ipsum exercitation eiusmod incididunt officia quis."
+						}
+					}
+				]
+			},
+			"tracks_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Pariatur commodo ipsum proident non cupidatat ea adipisicing minim duis deserunt. Commodo ad cillum ea fugiat et esse velit quis anim enim incididunt non voluptate ea."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
