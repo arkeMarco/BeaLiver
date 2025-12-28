@@ -32,6 +32,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "support_us": {
+              "type": "SharedSlice"
+            },
             "projects_list": {
               "type": "SharedSlice"
             },

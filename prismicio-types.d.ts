@@ -171,6 +171,7 @@ export type HeaderDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | SupportUsSlice
   | ProjectsListSlice
   | VisionCardsSlice
   | FiltersSlice
@@ -1658,6 +1659,71 @@ export type RichTextSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *SupportUs → Default → Primary*
+ */
+export interface SupportUsSliceDefaultPrimary {
+  /**
+   * body field in *SupportUs → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: support_us.default.primary.body
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  body: prismic.RichTextField;
+
+  /**
+   * buttonText field in *SupportUs → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: support_us.default.primary.buttontext
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  buttontext: prismic.RichTextField;
+
+  /**
+   * link field in *SupportUs → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: support_us.default.primary.link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Default variation for SupportUs Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type SupportUsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SupportUsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SupportUs*
+ */
+type SupportUsSliceVariation = SupportUsSliceDefault;
+
+/**
+ * SupportUs Shared Slice
+ *
+ * - **API ID**: `support_us`
+ * - **Description**: SupportUs
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type SupportUsSlice = prismic.SharedSlice<
+  "support_us",
+  SupportUsSliceVariation
+>;
+
+/**
  * Item in *VisionCards → Default → Primary → Cards*
  */
 export interface VisionCardsSliceDefaultPrimaryCardsItem {
@@ -1919,6 +1985,10 @@ declare module "@prismicio/client" {
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
       RichTextSliceDefault,
+      SupportUsSlice,
+      SupportUsSliceDefaultPrimary,
+      SupportUsSliceVariation,
+      SupportUsSliceDefault,
       VisionCardsSlice,
       VisionCardsSliceDefaultPrimaryCardsItem,
       VisionCardsSliceDefaultPrimary,

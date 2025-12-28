@@ -18,7 +18,6 @@ const Header: FC<HeaderProps> = ({ settings }) => {
   return (
     <header className="w-full py-6 bg-transparent">
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* LOGO (Sinistra) */}
         <div className="shrink-0 w-16">
           <Link href="/">
             <PrismicNextImage
