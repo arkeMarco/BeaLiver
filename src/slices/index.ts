@@ -14,5 +14,6 @@ export const components = {
   hp_people: dynamic(() => import("./HpOurPeople")),
   projects_list: dynamic(() => import("./ProjectsList")),
   rich_text: dynamic(() => import("./RichText")),
+  vision_cards: dynamic(() => import("./VisionCards")),
   welcome: dynamic(() => import("./HpWelcome")),
 };

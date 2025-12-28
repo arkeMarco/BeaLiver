@@ -32,6 +32,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "projects_list": {
+              "type": "SharedSlice"
+            },
+            "vision_cards": {
+              "type": "SharedSlice"
+            },
             "filters": {
               "type": "SharedSlice"
             },

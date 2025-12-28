@@ -171,6 +171,8 @@ export type HeaderDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | ProjectsListSlice
+  | VisionCardsSlice
   | FiltersSlice
   | EventsIntroductionSlice
   | WelcomeSlice
@@ -1656,6 +1658,86 @@ export type RichTextSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *VisionCards → Default → Primary → Cards*
+ */
+export interface VisionCardsSliceDefaultPrimaryCardsItem {
+  /**
+   * image field in *VisionCards → Default → Primary → Cards*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: vision_cards.default.primary.cards[].image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * title field in *VisionCards → Default → Primary → Cards*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: vision_cards.default.primary.cards[].title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * body field in *VisionCards → Default → Primary → Cards*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: vision_cards.default.primary.cards[].body
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  body: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *VisionCards → Default → Primary*
+ */
+export interface VisionCardsSliceDefaultPrimary {
+  /**
+   * Cards field in *VisionCards → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: vision_cards.default.primary.cards[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  cards: prismic.GroupField<Simplify<VisionCardsSliceDefaultPrimaryCardsItem>>;
+}
+
+/**
+ * Default variation for VisionCards Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type VisionCardsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<VisionCardsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *VisionCards*
+ */
+type VisionCardsSliceVariation = VisionCardsSliceDefault;
+
+/**
+ * VisionCards Shared Slice
+ *
+ * - **API ID**: `vision_cards`
+ * - **Description**: VisionCards
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type VisionCardsSlice = prismic.SharedSlice<
+  "vision_cards",
+  VisionCardsSliceVariation
+>;
+
+/**
  * Primary content in *HpWelcome → Default → Primary*
  */
 export interface WelcomeSliceDefaultPrimary {
@@ -1837,6 +1919,11 @@ declare module "@prismicio/client" {
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
       RichTextSliceDefault,
+      VisionCardsSlice,
+      VisionCardsSliceDefaultPrimaryCardsItem,
+      VisionCardsSliceDefaultPrimary,
+      VisionCardsSliceVariation,
+      VisionCardsSliceDefault,
       WelcomeSlice,
       WelcomeSliceDefaultPrimary,
       WelcomeSliceVariation,
