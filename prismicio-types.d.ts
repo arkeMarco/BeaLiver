@@ -106,14 +106,24 @@ export type FooterDocument<Lang extends string = string> =
  */
 export interface HeaderDocumentDataLinksItem {
   /**
-   * page field in *Header → Links*
+   * text field in *Header → Links*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.links[].text
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * link field in *Header → Links*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: header.links[].page
+   * - **API ID Path**: header.links[].link
    * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  page: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -143,7 +153,7 @@ interface HeaderDocumentData {
   links: prismic.GroupField<Simplify<HeaderDocumentDataLinksItem>>;
 
   /**
-   * Button field in *Header*
+   * button field in *Header*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -320,6 +330,56 @@ export interface BecomeAMemberSliceDefaultPrimaryBelieverItem {
 }
 
 /**
+ * Item in *BecomeAMember → withQR → Primary → BaseMember*
+ */
+export interface BecomeAMemberSliceWithQrPrimaryBasememberItem {
+  /**
+   * Icon field in *BecomeAMember → withQR → Primary → BaseMember*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: become_a_member.withQr.primary.basemember[].icon
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * Description field in *BecomeAMember → withQR → Primary → BaseMember*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: become_a_member.withQr.primary.basemember[].description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Item in *BecomeAMember → withQR → Primary → Believer*
+ */
+export interface BecomeAMemberSliceWithQrPrimaryBelieverItem {
+  /**
+   * Icon field in *BecomeAMember → withQR → Primary → Believer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: become_a_member.withQr.primary.believer[].icon
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * Description field in *BecomeAMember → withQR → Primary → Believer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: become_a_member.withQr.primary.believer[].description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+}
+
+/**
  * Primary content in *BecomeAMember → Default → Primary*
  */
 export interface BecomeAMemberSliceDefaultPrimary {
@@ -428,9 +488,139 @@ export type BecomeAMemberSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *BecomeAMember → withQR → Primary*
+ */
+export interface BecomeAMemberSliceWithQrPrimary {
+  /**
+   * AboveTitle field in *BecomeAMember → withQR → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: become_a_member.withQr.primary.abovetitle
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  abovetitle: prismic.RichTextField;
+
+  /**
+   * Title field in *BecomeAMember → withQR → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: become_a_member.withQr.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * MemberTitle field in *BecomeAMember → withQR → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: become_a_member.withQr.primary.membertitle
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  membertitle: prismic.RichTextField;
+
+  /**
+   * MemberQR field in *BecomeAMember → withQR → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: become_a_member.withQr.primary.memberqr
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  memberqr: prismic.ImageField<never>;
+
+  /**
+   * BaseMember field in *BecomeAMember → withQR → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: become_a_member.withQr.primary.basemember[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  basemember: prismic.GroupField<
+    Simplify<BecomeAMemberSliceWithQrPrimaryBasememberItem>
+  >;
+
+  /**
+   * BeaLiverTitle field in *BecomeAMember → withQR → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: become_a_member.withQr.primary.bealivertitle
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  bealivertitle: prismic.RichTextField;
+
+  /**
+   * bealiver under title field in *BecomeAMember → withQR → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: become_a_member.withQr.primary.bealiver_under_title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  bealiver_under_title: prismic.RichTextField;
+
+  /**
+   * BeaLiverQR field in *BecomeAMember → withQR → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: become_a_member.withQr.primary.bealiverqr
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  bealiverqr: prismic.ImageField<never>;
+
+  /**
+   * Believer field in *BecomeAMember → withQR → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: become_a_member.withQr.primary.believer[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  believer: prismic.GroupField<
+    Simplify<BecomeAMemberSliceWithQrPrimaryBelieverItem>
+  >;
+
+  /**
+   * Join us field in *BecomeAMember → withQR → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: become_a_member.withQr.primary.join_us
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  join_us: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
+ * withQR variation for BecomeAMember Slice
+ *
+ * - **API ID**: `withQr`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type BecomeAMemberSliceWithQr = prismic.SharedSliceVariation<
+  "withQr",
+  Simplify<BecomeAMemberSliceWithQrPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *BecomeAMember*
  */
-type BecomeAMemberSliceVariation = BecomeAMemberSliceDefault;
+type BecomeAMemberSliceVariation =
+  | BecomeAMemberSliceDefault
+  | BecomeAMemberSliceWithQr;
 
 /**
  * BecomeAMember Shared Slice
@@ -1932,8 +2122,12 @@ declare module "@prismicio/client" {
       BecomeAMemberSliceDefaultPrimaryBasememberItem,
       BecomeAMemberSliceDefaultPrimaryBelieverItem,
       BecomeAMemberSliceDefaultPrimary,
+      BecomeAMemberSliceWithQrPrimaryBasememberItem,
+      BecomeAMemberSliceWithQrPrimaryBelieverItem,
+      BecomeAMemberSliceWithQrPrimary,
       BecomeAMemberSliceVariation,
       BecomeAMemberSliceDefault,
+      BecomeAMemberSliceWithQr,
       EventsIntroductionSlice,
       EventsIntroductionSliceDefaultPrimary,
       EventsIntroductionSliceVariation,

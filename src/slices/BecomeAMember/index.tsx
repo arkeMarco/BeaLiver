@@ -6,6 +6,8 @@ import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 export type BecomeAMemberProps = SliceComponentProps<Content.BecomeAMemberSlice>;
 
 const BecomeAMember: FC<BecomeAMemberProps> = ({ slice }) => {
+  const isWithQR = slice.variation === "withQr";
+
   return (
     <section className="py-24 w-full">
       <div className="">
@@ -25,11 +27,23 @@ const BecomeAMember: FC<BecomeAMemberProps> = ({ slice }) => {
           
           {/* Card Sinistra: Base Member */}
           <div className="p-8 md:p-12 flex flex-col">
-            <div className="text-white text-2xl uppercase mb-12 tracking-wide">
-              <PrismicRichText field={slice.primary.membertitle} />
+            <div className="space-y-4">
+              <div className="text-white text-2xl uppercase tracking-wide">
+                <PrismicRichText field={slice.primary.membertitle} />
+              </div>
+              {isWithQR && slice.primary.memberqr && (
+                <div className="flex justify-center">
+                  <div className="w-40 h-40">
+                    <PrismicNextImage 
+                      field={slice.primary.memberqr} 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
 
-            <div className="space-y-10">
+            <div className="space-y-10 mt-12">
               {slice.primary.basemember.map((item, index) => (
                 <div key={index} className="flex flex-col items-start gap-1">
                   <div className="shrink-0">
@@ -53,11 +67,23 @@ const BecomeAMember: FC<BecomeAMemberProps> = ({ slice }) => {
             <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/20 blur-[100px] rounded-full pointer-events-none transition-all duration-700 group-hover:bg-red-500/40 group-hover:scale-150"></div>
             
             <div className="relative z-10">
-              <div className="mb-2 text-white text-2xl uppercase tracking-wide">
-                <PrismicRichText field={slice.primary.bealivertitle} />
+              <div className="space-y-4">
+                <div className="text-white text-2xl uppercase tracking-wide">
+                  <PrismicRichText field={slice.primary.bealivertitle} />
+                </div>
+                {isWithQR && slice.primary.bealiverqr && (
+                  <div className="flex justify-center">
+                    <div className="w-40 h-40">
+                      <PrismicNextImage 
+                        field={slice.primary.bealiverqr} 
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
               
-              <div className="text-gray-400 text-xs uppercase tracking-widest mb-10">
+              <div className="text-gray-400 text-xs uppercase tracking-widest mb-10 mt-4">
                 <PrismicRichText field={slice.primary.bealiver_under_title} />
               </div>
 
@@ -82,14 +108,16 @@ const BecomeAMember: FC<BecomeAMemberProps> = ({ slice }) => {
         </div>
 
         {/* Bottone Join Us */}
-        <div className="text-center">
-          <PrismicNextLink 
-            field={slice.primary.join_us} 
-            className="inline-block border border-white/50 rounded-md px-10 py-3 text-white text-lg uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
-          >
-            JOIN US
-          </PrismicNextLink>
-        </div>
+        {!isWithQR && (
+          <div className="text-center">
+            <PrismicNextLink 
+              field={slice.primary.join_us} 
+              className="inline-block border border-white/50 rounded-md px-10 py-3 text-white text-lg uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
+            >
+              JOIN US
+            </PrismicNextLink>
+          </div>
+        )}
 
       </div>
     </section>

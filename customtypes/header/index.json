@@ -20,10 +20,19 @@
           "label": "Links",
           "repeat": true,
           "fields": {
-            "page": {
+            "text": {
+              "type": "StructuredText",
+              "config": {
+                "label": "text",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "link": {
               "type": "Link",
               "config": {
-                "label": "page",
+                "label": "link",
                 "placeholder": "",
                 "select": null,
                 "allowTargetBlank": true,
@@ -37,7 +46,7 @@
       "button": {
         "type": "Link",
         "config": {
-          "label": "Button",
+          "label": "button",
           "placeholder": "",
           "select": null,
           "allowTargetBlank": true,

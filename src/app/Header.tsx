@@ -32,7 +32,7 @@ const Header: FC<HeaderProps> = ({ settings }) => {
           {navigationLinks.map((item, index) => (
             <div key={index}>
               <PrismicNextLink
-                field={item.page}
+                field={item.link}
                 className="text-gray-400 text-sm hover:text-gray-300 font-extralight neutralFace"
               />
             </div>
