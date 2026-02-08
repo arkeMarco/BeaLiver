@@ -8,12 +8,14 @@ export type FiltersProps = SliceComponentProps<Content.FiltersSlice>;
 const Filters: FC<FiltersProps> = ({ slice }) => {
   const { above_title_past_events, title_past_events, items } = slice.primary;
 
-  const currentEvents = items.filter(
-    (item) => item.tag_past_present[0].text === "present"
-  );
-  const pastEvents = items.filter(
-    (item) => item.tag_past_present[0].text === "past"
-  );
+  const currentEvents = items.filter((item) => {
+    const tag = item.tag_past_present?.[0];
+    return tag && "text" in tag && tag.text === "present";
+  });
+  const pastEvents = items.filter((item) => {
+    const tag = item.tag_past_present?.[0];
+    return tag && "text" in tag && tag.text === "past";
+  });
 
   console.log("Current Events:", currentEvents);
   return (
