@@ -181,6 +181,7 @@ export type HeaderDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | TitleSlice
   | SupportUsSlice
   | ProjectsListSlice
   | VisionCardsSlice
@@ -1422,6 +1423,51 @@ export interface HpOurProjectsSliceDefaultPrimaryCardsItem {
 }
 
 /**
+ * Item in *HpOurProjects → projectPage → Primary → Cards*
+ */
+export interface HpOurProjectsSliceProjectPagePrimaryCardsItem {
+  /**
+   * Image field in *HpOurProjects → projectPage → Primary → Cards*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hp_our_projects.projectPage.primary.cards[].image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Category field in *HpOurProjects → projectPage → Primary → Cards*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hp_our_projects.projectPage.primary.cards[].category
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  category: prismic.RichTextField;
+
+  /**
+   * Title field in *HpOurProjects → projectPage → Primary → Cards*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hp_our_projects.projectPage.primary.cards[].title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Description field in *HpOurProjects → projectPage → Primary → Cards*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hp_our_projects.projectPage.primary.cards[].description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+}
+
+/**
  * Primary content in *HpOurProjects → Default → Primary*
  */
 export interface HpOurProjectsSliceDefaultPrimary {
@@ -1498,9 +1544,41 @@ export type HpOurProjectsSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *HpOurProjects → projectPage → Primary*
+ */
+export interface HpOurProjectsSliceProjectPagePrimary {
+  /**
+   * Cards field in *HpOurProjects → projectPage → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hp_our_projects.projectPage.primary.cards[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  cards: prismic.GroupField<
+    Simplify<HpOurProjectsSliceProjectPagePrimaryCardsItem>
+  >;
+}
+
+/**
+ * projectPage variation for HpOurProjects Slice
+ *
+ * - **API ID**: `projectPage`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HpOurProjectsSliceProjectPage = prismic.SharedSliceVariation<
+  "projectPage",
+  Simplify<HpOurProjectsSliceProjectPagePrimary>,
+  never
+>;
+
+/**
  * Slice variation for *HpOurProjects*
  */
-type HpOurProjectsSliceVariation = HpOurProjectsSliceDefault;
+type HpOurProjectsSliceVariation =
+  | HpOurProjectsSliceDefault
+  | HpOurProjectsSliceProjectPage;
 
 /**
  * HpOurProjects Shared Slice
@@ -1560,6 +1638,51 @@ export interface HpPeopleSliceDefaultPrimaryPersonItem {
 }
 
 /**
+ * Item in *HpOurPeople → peoplepage → Primary → Person*
+ */
+export interface HpPeopleSlicePeoplepagePrimaryPersonItem {
+  /**
+   * Name field in *HpOurPeople → peoplepage → Primary → Person*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hp_people.peoplepage.primary.person[].name
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  name: prismic.RichTextField;
+
+  /**
+   * title field in *HpOurPeople → peoplepage → Primary → Person*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hp_people.peoplepage.primary.person[].title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * description field in *HpOurPeople → peoplepage → Primary → Person*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hp_people.peoplepage.primary.person[].description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * person image field in *HpOurPeople → peoplepage → Primary → Person*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hp_people.peoplepage.primary.person[].person_image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  person_image: prismic.ImageField<never>;
+}
+
+/**
  * Primary content in *HpOurPeople → Default → Primary*
  */
 export interface HpPeopleSliceDefaultPrimary {
@@ -1608,9 +1731,59 @@ export type HpPeopleSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *HpOurPeople → peoplepage → Primary*
+ */
+export interface HpPeopleSlicePeoplepagePrimary {
+  /**
+   * above title field in *HpOurPeople → peoplepage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hp_people.peoplepage.primary.above_title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  above_title: prismic.RichTextField;
+
+  /**
+   * title field in *HpOurPeople → peoplepage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hp_people.peoplepage.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Person field in *HpOurPeople → peoplepage → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hp_people.peoplepage.primary.person[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  person: prismic.GroupField<
+    Simplify<HpPeopleSlicePeoplepagePrimaryPersonItem>
+  >;
+}
+
+/**
+ * peoplepage variation for HpOurPeople Slice
+ *
+ * - **API ID**: `peoplepage`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HpPeopleSlicePeoplepage = prismic.SharedSliceVariation<
+  "peoplepage",
+  Simplify<HpPeopleSlicePeoplepagePrimary>,
+  never
+>;
+
+/**
  * Slice variation for *HpOurPeople*
  */
-type HpPeopleSliceVariation = HpPeopleSliceDefault;
+type HpPeopleSliceVariation = HpPeopleSliceDefault | HpPeopleSlicePeoplepage;
 
 /**
  * HpOurPeople Shared Slice
@@ -1914,6 +2087,58 @@ export type SupportUsSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Title → Default → Primary*
+ */
+export interface TitleSliceDefaultPrimary {
+  /**
+   * overtitle field in *Title → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title.default.primary.overtitle
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  overtitle: prismic.RichTextField;
+
+  /**
+   * title field in *Title → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Title Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TitleSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TitleSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Title*
+ */
+type TitleSliceVariation = TitleSliceDefault;
+
+/**
+ * Title Shared Slice
+ *
+ * - **API ID**: `title`
+ * - **Description**: Title
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TitleSlice = prismic.SharedSlice<"title", TitleSliceVariation>;
+
+/**
  * Item in *VisionCards → Default → Primary → Cards*
  */
 export interface VisionCardsSliceDefaultPrimaryCardsItem {
@@ -2162,13 +2387,19 @@ declare module "@prismicio/client" {
       HpOurProjectsSlice,
       HpOurProjectsSliceDefaultPrimaryCardsItem,
       HpOurProjectsSliceDefaultPrimary,
+      HpOurProjectsSliceProjectPagePrimaryCardsItem,
+      HpOurProjectsSliceProjectPagePrimary,
       HpOurProjectsSliceVariation,
       HpOurProjectsSliceDefault,
+      HpOurProjectsSliceProjectPage,
       HpPeopleSlice,
       HpPeopleSliceDefaultPrimaryPersonItem,
       HpPeopleSliceDefaultPrimary,
+      HpPeopleSlicePeoplepagePrimaryPersonItem,
+      HpPeopleSlicePeoplepagePrimary,
       HpPeopleSliceVariation,
       HpPeopleSliceDefault,
+      HpPeopleSlicePeoplepage,
       ProjectsListSlice,
       ProjectsListSliceDefaultPrimaryFiltersListItem,
       ProjectsListSliceDefaultPrimaryProjectsItemItem,
@@ -2183,6 +2414,10 @@ declare module "@prismicio/client" {
       SupportUsSliceDefaultPrimary,
       SupportUsSliceVariation,
       SupportUsSliceDefault,
+      TitleSlice,
+      TitleSliceDefaultPrimary,
+      TitleSliceVariation,
+      TitleSliceDefault,
       VisionCardsSlice,
       VisionCardsSliceDefaultPrimaryCardsItem,
       VisionCardsSliceDefaultPrimary,

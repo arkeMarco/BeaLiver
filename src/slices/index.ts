@@ -15,6 +15,7 @@ export const components = {
   projects_list: dynamic(() => import("./ProjectsList")),
   rich_text: dynamic(() => import("./RichText")),
   support_us: dynamic(() => import("./SupportUs")),
+  title: dynamic(() => import("./Title")),
   vision_cards: dynamic(() => import("./VisionCards")),
   welcome: dynamic(() => import("./HpWelcome")),
 };
